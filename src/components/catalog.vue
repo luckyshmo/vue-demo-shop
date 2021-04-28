@@ -2,6 +2,8 @@
     <div>
         <p>catalog</p>
         <catalog-item />
+        <catalog-item />
+        <catalog-item />
     </div>
 </template>
 <script>
@@ -19,6 +21,14 @@ export default {
     computed: {}
 }
 </script>
-<style lang="">
-    
+
+<style lang="scss">
+    .v-catalog {
+        &__list{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 </style>
