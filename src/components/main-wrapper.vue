@@ -1,13 +1,13 @@
 <template>
     <div class="main-wrapper">
-        <p>{{title}}</p>
         <catalog/>
-        <cart/>
+        <cart v-if="CART.length"/>
     </div>
 </template>
 <script>
 import catalog from './catalog.vue'
 import cart from './cart/cart'
+import {mapGetters} from 'vuex'
 
 export default {
     name: 'main-wrapper',
@@ -18,14 +18,17 @@ export default {
     props: {},
     data() {
         return {
-            title: 'Main wrapper'
         }
     },
-    computed: {},
     methods: {},
     watch: {},
     mounted() { //fully loaded component
         console.log("I'am ALIVE!")
+    },
+    computed: {
+        ...mapGetters([
+            'CART'
+        ])
     },
 }
 </script>
