@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss">
-  .v-catalog {
+  .catalog {
     &__list {
       display: flex;
       flex-wrap: wrap;
