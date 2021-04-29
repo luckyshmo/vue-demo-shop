@@ -13,6 +13,10 @@
             @increment="increment(index)"
             @decrement="decrement(index)"
         />
+        <div class="cart__total">
+          <p class="total__name">Total:</p>
+          <p>{{cartTotalCost | toFix | formattedPrice}} $</p>
+        </div>
     </div>
 </template>
 <script>
@@ -35,7 +39,23 @@ export default {
     data() {
         return {}
     },
-    computed: {},
+    computed: {
+      cartTotalCost(){
+        let result = []
+
+        if (this.cart_data.length){
+          for (let item of this.cart_data) {
+            result.push(item.price * item.quantity);
+          }
+
+          result = result.reduce(function(sum, el){
+            return sum + el;
+          })
+          return result
+        }
+        return 0
+      }
+    },
     methods: {
       ...mapActions([
         'DELETE_FROM_CART',
