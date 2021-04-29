@@ -1,7 +1,10 @@
 <template>
     <div class="main-wrapper">
         <catalog/>
-        <cart v-if="CART.length"/>
+        <cart 
+            v-if="CART.length"
+            :cart_data="CART"
+        />
     </div>
 </template>
 <script>

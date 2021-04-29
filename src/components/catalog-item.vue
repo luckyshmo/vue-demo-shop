@@ -25,6 +25,9 @@ export default {
         return {}
     },
     computed: {},
+    mounted() {
+      this.$set(this.product_data, 'quantity', 1) //add prop to Object
+    },
     methods: {
         sendDataToParent() {
             this.$emit('sendArticle', this.product_data.article)
