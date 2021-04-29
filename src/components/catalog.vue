@@ -2,9 +2,12 @@
     <div class="catalog">
         <h1>Catalog</h1>
         <div class="catalog__list">
-            <catalog-item />
-            <catalog-item />
-            <catalog-item />
+            <catalog-item
+                v-for="product in products"
+                :key="product.article"
+                v-bind:product_data="product"
+                @sendArticle="showChildArticle"
+            />
         </div>
     </div>
 </template>
@@ -18,9 +21,25 @@ export default {
     },
     props: {},
     data() {
-        return {}
+        return {
+            products: [
+                {
+                    image: "1.png",
+                    name: "T-shirt 1",
+                    price: 2100.234234234,
+                    article: "T1",
+                    available: true,
+                    category: "Мужские"
+                },
+            ]
+        }
     },
-    computed: {}
+    computed: {},
+    methods: {
+        showChildArticle(data){
+            console.log(data)
+        }
+    }
 }
 </script>
 
