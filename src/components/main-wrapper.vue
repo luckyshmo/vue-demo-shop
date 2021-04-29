@@ -1,17 +1,11 @@
 <template>
     <div class="main-wrapper">
-        <router-view></router-view>
-        <!-- <catalog/>
-        <cart 
-            v-if="CART.length"
-            :cart_data="CART"
-        /> -->
+        <keep-alive>
+            <router-view></router-view>
+        </keep-alive>
     </div>
 </template>
 <script>
-// import catalog from './catalog/catalog.vue'
-// import cart from './cart/cart'
-import {mapGetters} from 'vuex'
 
 export default {
     name: 'main-wrapper',
@@ -29,11 +23,7 @@ export default {
     mounted() { //fully loaded component
         console.log("I'am ALIVE!")
     },
-    computed: {
-        ...mapGetters([
-            'CART'
-        ])
-    },
+    computed: {},
 }
 </script>
 
