@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import catalog from '../components/catalog/catalog'
 import cart from '../components/cart/cart'
-import mainPage from '../components/main-page/main-page'
+import mainPage from '../components/main/main'
 // import productPage from '../components/catalog/product-page'
 
 Vue.use(Router);
