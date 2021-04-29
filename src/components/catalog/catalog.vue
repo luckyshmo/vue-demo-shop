@@ -1,6 +1,6 @@
 <template>
     <div class="catalog">
-        <div class="catalog__link_to_cart">CART </div>
+        <div class="catalog__link_to_cart"> CART </div>
         <h1>Catalog</h1>
         <div class="catalog__list">
             <catalog-item
@@ -62,8 +62,8 @@ export default {
     }
     &__link_to_cart {
       position: fixed;
-      top: 80px;
-      right: 10px;
+      top: 20px;
+      right: 20px;
       padding: $padding*2;
       border: solid 1px #aeaeae;
       background: #ffffff;
