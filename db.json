@@ -46,7 +46,15 @@
         "price": 8700.4124123,
         "article": "T6",
         "available": true,
-        "category": "Женские"
+        "category": "Мужские"
+      },
+      {
+        "image": "6.png",
+        "name": "T-shirt 7",
+        "price": 5100.123123,
+        "article": "T7",
+        "available": true,
+        "category": "Мужские"
       }
     ]
   }
