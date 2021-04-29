@@ -1,9 +1,11 @@
 <template>
-    <div>
-        <p>catalog</p>
-        <catalog-item />
-        <catalog-item />
-        <catalog-item />
+    <div class="catalog">
+        <h1>Catalog</h1>
+        <div class="catalog__list">
+            <catalog-item />
+            <catalog-item />
+            <catalog-item />
+        </div>
     </div>
 </template>
 <script>
@@ -23,7 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
-    .v-catalog {
+    .catalog {
         &__list{
             display: flex;
             flex-wrap: wrap;

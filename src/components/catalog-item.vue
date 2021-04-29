@@ -3,7 +3,7 @@
         <img src="" alt="img">
         <p>Item</p>
         <p>Price: 1</p>
-        <button>Add to cart</button>
+        <button class="btn">Add to cart</button>
     </div>
 </template>
 <script>
@@ -26,5 +26,4 @@ export default {
             width: 100px;
         }
     }
-    
 </style>
