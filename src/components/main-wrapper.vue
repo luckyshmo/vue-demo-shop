@@ -8,7 +8,7 @@
     </div>
 </template>
 <script>
-import catalog from './catalog.vue'
+import catalog from './catalog/catalog.vue'
 import cart from './cart/cart'
 import {mapGetters} from 'vuex'
 
