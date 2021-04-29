@@ -3,7 +3,7 @@
         <h1>Catalog</h1>
         <div class="catalog__list">
             <catalog-item
-                v-for="product in products"
+                v-for="product in PRODUCTS"
                 :key="product.article"
                 v-bind:product_data="product"
                 @sendArticle="showChildArticle"
@@ -13,6 +13,7 @@
 </template>
 <script>
 import CatalogItem from './catalog-item.vue'
+import {mapActions, mapGetters} from 'vuex'
 
 export default {
     name: 'catalog',
@@ -22,23 +23,29 @@ export default {
     props: {},
     data() {
         return {
-            products: [
-                {
-                    image: "1.png",
-                    name: "T-shirt 1",
-                    price: 2100.234234234,
-                    article: "T1",
-                    available: true,
-                    category: "Мужские"
-                },
-            ]
+            
         }
     },
-    computed: {},
+    computed: {
+        ...mapGetters([
+            'PRODUCTS'
+        ])
+    },
     methods: {
+        ...mapActions([
+            'GET_PRODUCTS_FROM_API'
+        ]),
         showChildArticle(data){
             console.log(data)
         }
+    },
+    mounted(){
+        this.GET_PRODUCTS_FROM_API()
+        .then((response) => {
+            if (response.data) {
+                console.log(response.data)
+            }
+        })
     }
 }
 </script>
