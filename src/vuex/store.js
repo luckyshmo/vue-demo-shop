@@ -10,7 +10,7 @@ const actions = {...commonActions, ...apiRequests}
 
 Vue.use(Vuex);
 
-let store = new Vuex.Store({
+const store = new Vuex.Store({
   state: {
     searchValue: '',
     isMobile: false,

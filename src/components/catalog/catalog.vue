@@ -87,10 +87,11 @@ export default {
 <style lang="scss">
   .catalog {
     &__list {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
       justify-content: space-between;
       align-items: center;
+      grid-gap: 30px;
     }
     &__link_to_cart {
       position: fixed;
